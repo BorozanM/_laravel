@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('stavka_racunas', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('racun');
+            $table->foreignId('laptop');
+            $table->integer('kolicina');
             $table->timestamps();
         });
     }
