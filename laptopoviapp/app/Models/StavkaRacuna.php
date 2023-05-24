@@ -13,4 +13,12 @@ class StavkaRacuna extends Model
         'kolicina',
         'racun'
     ];
+    public function racuna()
+    {
+        return $this->belongsTo(Racun::class);
+    }
+    public function proizvod()
+    {
+        return $this->belongsTo(Laptop::class);
+    }
 }
