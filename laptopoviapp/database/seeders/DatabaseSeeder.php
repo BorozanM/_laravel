@@ -4,6 +4,9 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use App\Models\Laptop;
+use App\Models\Racun;
+use App\Models\StavkaRacuna;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
@@ -14,6 +17,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        User::truncate();
+        StavkaRacuna::truncate();
+        Racun::truncate();
+        Laptop::truncate();
         User::factory(10)->create();
 
         $ts = new LaptopSeeder();
