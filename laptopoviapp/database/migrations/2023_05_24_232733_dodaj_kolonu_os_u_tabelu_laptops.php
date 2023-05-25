@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('racuns', function (Blueprint $table) {
-            $table->id();
-            $table->date('datum');
-            $table->string('adresaLokala');
-            $table->timestamps();
-        });
+        Schema::table('laptops', function (Blueprint $table) {
+            $table->string('os');
+       });
     }
 
     /**
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('racuns');
+        Schema::table('laptops', function (Blueprint $table) {
+            $table->removeColumn('os');
+       });
     }
 };

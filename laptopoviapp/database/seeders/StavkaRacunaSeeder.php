@@ -2,16 +2,18 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\StavkaRacuna;
 use Illuminate\Database\Seeder;
 
 class StavkaRacunaSeeder extends Seeder
 {
     /**
      * Run the database seeds.
+     *
+     * @return void
      */
-    public function run(): void
+    public function run()
     {
-        //
+        StavkaRacuna::factory(10)->create();
     }
 }

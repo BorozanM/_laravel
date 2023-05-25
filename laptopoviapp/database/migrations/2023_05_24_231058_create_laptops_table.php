@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('laptops', function (Blueprint $table) {
             $table->id();
+            $table->string('naziv');
+            $table->string('ekran');
+            $table->string('baterija');
+            // $table->string('os');
+            $table->string('boja');
+            $table->integer('cena');
             $table->timestamps();
         });
     }
